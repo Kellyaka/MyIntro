@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+	user-drag: none;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.bg {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url('https://cdn.discordapp.com/attachments/1125295823534694491/1141808938011070524/2641052.gif');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.blur {
+  width: 60vh;
+  height: 65vh;
+  position: absolute;
+  top: 15%;
+  left: 35%;
+  backdrop-filter: blur(10px);
+  border-radius: 10%;
+}
+
+.me {
+  position: absolute;
+  top: 33vh;
+  left: 89vh;
+  transform: translate(-50%, -50%);
+}
+
+.me img:hover{
+	border: 2px solid ghostwhite;
+}
+
+.me img {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.me .about {
+	font-size: 3vh;
+	color: ghostwhite;
+	position: absolute;
+	left: 21vh;
+	top: 15vh;
+}
+
+.info{
+	user-select: none;
+	font-size: 2vh;
+	position: absolute;
+	color: white;
+	left: 85vh;
+	top: 50%;
+}
+
+
+
+.info:hover{
+	text-decoration: None;
+}
+
+
+.logo .inst img{
+	width: 12vh;
+	height: 12vh;
+	display: inline;
+	position: absolute;
+	top: 85vh;
+	left: 36%;
+
+}
+.logo .discord img{
+	width: 12vh;
+	height: 12vh;
+	display: inline;
+	position: absolute;
+	top: 85vh;
+	left: 56%;
+
+}
+
+
+.logo .git img{
+	width: 11vh;
+	height: 11vh;
+	display: inline;
+	position: absolute;
+	top: 85vh;
+	left: 46.5%;
+
+}
+
+
+.logo .no img{
+	width: 10vh;
+	height: 10vh;
+	position: absolute;
+	top: 85vh;
+	right: 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.me p {
+	user-select: None;
+  font-size: 8vh;
+  color: white;
+  position: absolute;
+  left: 17vh;
+  top: 2vh;
+  text-decoration: None;
+  transition: text-decoration 1s ease;
+}
+
+.me p::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: ghostwhite;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.8s ease;
+}
+
+.me p:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Media Queries for Responsiveness */
+
+@media screen and (max-width: 768px) {
+  .blur {
+    width: 80vw;
+    height: 70vh;
+    left: 10%;
+  }
+  
+  .me {
+    top: 30%;
+    left: 50%;
+  }
+  
+  .me img {
+    width: 10rem;
+    height: 10rem;
+  }
+  
+  .me p {
+    font-size: 8vh;
+    left: 50%;
+    top: 27vh;
+    transform: translateX(-50%);
+  }
+
+  .me .about{
+  	font-size: 3vh;
+  	position: absolute;
+  	top: 37vh;
+  	left: 13vh;
+  }
+  .info{
+  	font-size: 2vh;
+  	position: absolute;
+  	top: 60vh;
+  	left: 15vh;
+  }
+
+  .logo .inst{
+  	position: absolute;
+  	left: 10%;
+  	top: 1%;
+  }
+
+  .logo .git{
+  	position: absolute;
+  	top: 2%;
+  	left: 41.9%;
+  }
+
+  .logo .discord{
+  	position: absolute;
+  	left: 70%;
+  	top: 1%;
+  }
+
+  .logo .no {
+  	display: none;
+  }
